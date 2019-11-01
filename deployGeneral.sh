@@ -8,7 +8,7 @@ echo "Clonando commons"
 git clone https://github.com/sisoputnfrba/so-commons-library.git
 cd ~/so-commons-library
 echo "Instalando commons"
-make
+sudo make install
 
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
