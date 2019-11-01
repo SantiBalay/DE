@@ -1,0 +1,10 @@
+//Dar permisos de ejecucion al .sh
+chmod +x archivo
+
+//En caso de olvidar referenciar una librería compartida
+export LD_LIBRARY_PATH
+
+//Seg-fault al principio puede ser causado por falta de los archivos de config, o que no esten dentro de Debug
+
+//Ejemplo de ejecucion SAC-CLI
+./SAC-CLI -s -f ./mount_point
