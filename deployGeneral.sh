@@ -20,4 +20,4 @@ echo " /------------------------------------------------------------------------
 echo " /-----------------------------------------------------------------------------------------/"
 echo "Compilando librerias estaticas"
 cd ~/tp-2019-2c-NoCurseCreatividad/herramientas/Debug/
-make
+sudo make

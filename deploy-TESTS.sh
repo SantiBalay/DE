@@ -12,8 +12,8 @@ cd ~
 git clone https://github.com/sisoputnfrba/hilolay.git
 
 echo "Compilando Hilolay"
-make
-make install
+sudo make
+sudo make install
 
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
@@ -39,4 +39,4 @@ echo " /------------------------------------------------------------------------
 echo "Compilando linuse-tests-programs"
 cd~
 cd linuse-tests-programs
-make && make entrega
+sudo make && make entrega
