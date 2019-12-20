@@ -2,7 +2,7 @@ echo " /------------------------------------------------------------------------
 echo " /-----------------------------------------------------------------------------------------/"
 echo "Clonando linuse-tests"
 cd ~
-git clone https://github.com/sisopfrba/linuse-tests-programs.git
+git clone https://github.com/sisoputnfrba/linuse-tests-programs
 
 
 echo " /-----------------------------------------------------------------------------------------/"
@@ -12,6 +12,7 @@ cd ~
 git clone https://github.com/sisoputnfrba/hilolay.git
 
 echo "Compilando Hilolay"
+cd ~/hilolay
 sudo make
 sudo make install
 
@@ -37,6 +38,7 @@ cp ~/tp-2019-2c-NoCurseCreatividad/HilolayAlumnos/* ~/linuse-tests-programs
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
 echo "Compilando linuse-tests-programs"
-cd~
-cd linuse-tests-programs
-sudo make && make entrega
+cd ~
+cd ~/linuse-tests-programs
+sudo make
+sudo make entrega
