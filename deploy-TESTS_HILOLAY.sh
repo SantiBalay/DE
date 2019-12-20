@@ -11,10 +11,6 @@ echo "Instalando Hilolay"
 cd ~
 git clone https://github.com/sisoputnfrba/hilolay.git
 
-echo "Compilando Hilolay"
-cd ~/hilolay
-sudo make
-sudo make install
 
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
@@ -30,15 +26,23 @@ echo $LD_LIBRARY_PATH
 
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
-echo "Agregando HilolayAlumnos a linuse-tests-programs"
+echo "Agregando HilolayAlumnos a Hilolay"
 cd ~
-cp ~/tp-2019-2c-NoCurseCreatividad/HilolayAlumnos/* ~/linuse-tests-programs
+cp ~/tp-2019-2c-NoCurseCreatividad/HilolayAlumnos/* ~/hilolay
 
 
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
-echo "Compilando linuse-tests-programs"
+echo "Compilando Hilolay"
+cd ~
+cd ~/hilolay
+sudo make
+sudo make install
+
+
+echo " /-----------------------------------------------------------------------------------------/"
+echo " /-----------------------------------------------------------------------------------------/"
+echo "Compilando linuse-tests-programs con hilolay"
 cd ~
 cd ~/linuse-tests-programs
-sudo make
-sudo make entrega
+find . -name '*.c' -exec bash -c 'gcc "$0" -o ${0%.c} -lhilolay' {} \;
