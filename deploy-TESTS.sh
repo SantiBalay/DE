@@ -1,19 +1,8 @@
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
-echo "Clonando linuse-tests"
-cd ~
-git clone https://github.com/sisopfrba/linuse-tests-programs.git
-
-
-echo " /-----------------------------------------------------------------------------------------/"
-echo " /-----------------------------------------------------------------------------------------/"
-echo "Instalando Hilolay"
-cd ~
-git clone https://github.com/sisoputnfrba/hilolay.git
-
 echo "Compilando Hilolay"
+cd ~/tp-2019-2c-NoCurseCreatividad/Hilolay/
 sudo make
-sudo make install
 
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
@@ -21,22 +10,17 @@ echo "Agregando Hilolay como libreria externa"
 cd ~
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/tp-2019-2c-NoCurseCreatividad/Hilolay/Debug" >> .bashrc
 source .bashrc
- 
-echo " /-----------------------------------------------------------------------------------------/"
-echo " /-----------------------------------------------------------------------------------------/"
-echo "Imprimiendo LD_LIBRARY_PATH..."
-echo $LD_LIBRARY_PATH
+
 
 echo " /-----------------------------------------------------------------------------------------/"
 echo " /-----------------------------------------------------------------------------------------/"
-echo "Agregando HilolayAlumnos a linuse-tests-programs"
+echo "Compilando libmuse"
+cd ~/tp-2019-2c-NoCurseCreatividad/muse/
+sudo make
+
+echo " /-----------------------------------------------------------------------------------------/"
+echo " /-----------------------------------------------------------------------------------------/"
+echo "Agregando libmuse como libreria externa"
 cd ~
-cp ~/tp-2019-2c-NoCurseCreatividad/HilolayAlumnos/* ~/linuse-tests-programs
-
-
-echo " /-----------------------------------------------------------------------------------------/"
-echo " /-----------------------------------------------------------------------------------------/"
-echo "Compilando linuse-tests-programs"
-cd~
-cd linuse-tests-programs
-sudo make && make entrega
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/tp-2019-2c-NoCurseCreatividad/muse/Debug" >> .bashrc
+source .bashrc
