@@ -15,7 +15,7 @@ source .bashrc
 echo " "
 echo " "
 echo "Compilando libmuse"
-cd ~/tp-2019-2c-NoCurseCreatividad/muse/
+cd ~/tp-2019-2c-NoCurseCreatividad/muse/Debug/
 sudo make
 
 echo " "
