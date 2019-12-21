@@ -1,7 +1,7 @@
 echo " "
 echo " "
 echo "Compilando Hilolay"
-cd ~/tp-2019-2c-NoCurseCreatividad/Hilolay/
+cd ~/tp-2019-2c-NoCurseCreatividad/Hilolay/Debug/
 sudo make
 
 echo " "
